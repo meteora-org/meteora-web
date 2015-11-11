@@ -1,19 +1,19 @@
 # meteora-web
 
-### Getting source
+1.Getting source.
 
 ```
 git clone https://github.com/meteora-org/meteora-web.git
 ```
 
-### Building
+2.Building.
 
 ```
 cd meteora-web
 sudo npm install
 ```
 
-### Running
+3.Running.
 
 ```
 npm start

@@ -100,9 +100,6 @@ gulp.task('watch', function(){
 gulp.task('default', ['imagemin']);
 gulp.task('start', ['watch']);
 
-
-// スプライトpng&stylus自動生成
-// --image(イメージファイル名) でつくれます
 gulp.task('sprite', function () {
   var args = minimist(process.argv.slice(2));
   var imageName = 'icon';

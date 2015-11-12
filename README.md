@@ -20,4 +20,3 @@ npm start
 ```
 
 and access to [http://localhost:3000](http://localhost:3000)
-

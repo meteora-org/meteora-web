@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1><%= title %></h1>
+
+
+<a href="/movie/<% if (movie) { %> <%= movie.id %> <% } %>">Back</a>
+
+<form action="/movie<% if (movie) { %>/<%= movie.id %><% } %>/save" method="post">
+    <div>
+        <label>名前</label>
+        <input type="text" name="title" value="<%= movie.title %>"/>
+    </div>
+    <div>
+        <label>説明</label>
+        <input type="text" name="description" value="<%= movie.description %>"/>
+    </div>
+    <% if (movie) { %>
+    <input type="hidden" name="id" value="<%= movie.id %>"/>
+    <% } %>
+    <button type="submit">保存</button>
+</form>
+</body>
+</html>

@@ -6,12 +6,15 @@
 </head>
 <body>
 <h1><%= title %></h1>
+
+<a href="/movie/">Back</a>
+<a href="/movie/<%= movie.id %>/edit">Edit</a>
+
 <dl>
     <dt>名前</dt>
     <dd><%= movie.title %></dd>
     <dt>説明</dt>
     <dd><%= movie.description %></dd>
 </dl>
-<a href="/movie/">Back</a>
 </body>
 </html>

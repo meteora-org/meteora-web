@@ -8,9 +8,9 @@
 <h1><%= title %></h1>
 
 
-<a href="/movie/<% if (movie) { %> <%= movie.id %> <% } %>">Back</a>
+<a href="/movie/<% if (movie) { %><%= movie.id %><% } %>">Back</a>
 
-<form action="/movie<% if (movie) { %>/<%= movie.id %><% } %>/save" method="post">
+<form action="/movie/save" method="post">
     <div>
         <label>名前</label>
         <input type="text" name="title" value="<%= movie.title %>"/>

@@ -76,19 +76,39 @@ router.get('/new', function (req, res, next) {
     });
 });
 
-router.post('/:id(\\d+)/save', function (req, res, next) {
-    console.log("save" + JSON.stringify(req.body));
-    res.redirect('/movie/' + req.body.id);
-});
-
-router.post('/:id(\\d+)/save', function (req, res, next) {
-    console.log("save" + JSON.stringify(req.body));
-    res.redirect('/movie/' + req.body.id);
-});
-
 router.post('/save', function (req, res, next) {
-    console.log("save" + JSON.stringify(req.body));
-    res.redirect('/movie/1');
+    if (req.body.id) {
+        console.log('update: ' + JSON.stringify(req.body))
+        request('PUT', 'http://52.192.150.36:8081/movie/' + req.body.id)
+            .send(req.body)
+            .end(function (err, response) {
+                if (err) {
+                    throw err;
+                }
+                res.redirect('/movie/1');
+            });
+    } else {
+        console.log('insert: ' + JSON.stringify(req.body))
+        request('POST', 'http://52.192.150.36:8081/movie')
+            .send(req.body)
+            .end(function (err, response) {
+                if (err) {
+                    throw err;
+                }
+                res.redirect('/movie/' + response.header.location);
+            });
+    }
+});
+
+router.get('/:id(\\d+)/del', function (req, res, next) {
+    console.log('delete: ' + JSON.stringify(req.body))
+    request('DELETE', 'http://52.192.150.36:8081/movie/' + req.params.id)
+        .end(function (err, response) {
+            if (err) {
+                throw err;
+            }
+            res.redirect('/movie/');
+        });
 });
 
 module.exports = router;

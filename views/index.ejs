@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css'/>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/css/app.css'/>
 </head>
 <body>
-<h1><%= title %></h1>
+<div class="u-pm">
+  <h1 class="u-mbm"><%= title %></h1>
+  <p class="u-mbgx">Welcome to <%= title %></p>
 
-<p>Welcome to <%= title %></p>
-
-<h3>Users</h3>
-<table>
+  <h3 class="u-mbm">Users</h3>
+  <table class="u-mbgx">
     <% for(var key in data) { %>
     <tr>
-        <td><%= key %></td>
-        <td><%= data[key] %></td>
+      <td><%= key %></td>
+      <td><%= data[key] %></td>
     </tr>
     <% } %>
-</table>
+  </table>
 
-<h3>Github API</h3>
-<table>
+  <h3 class="u-mbm">Github API</h3>
+  <table class="u-mbm">
     <% for(var key in github) { %>
     <tr>
-        <td><%= key %></td>
-        <td><%= github[key] %></td>
+      <td><%= key %></td>
+      <td><%= github[key] %></td>
     </tr>
     <% } %>
-</table>
+  </table>
+</div>
 </body>
 </html>

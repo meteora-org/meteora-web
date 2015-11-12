@@ -6,9 +6,22 @@
 </head>
 <body>
 <h1><%= title %></h1>
-<% movies.forEach(function(movie) { %>
-    <li><a href="/movie/<%= movie.id%>"><%= movie.title %></a> - <%= movie.description %></li>
-<% }) %>
+
+<a href="/movie/new">New</a>
+
+<table border="1">
+    <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>description</th>
+    </tr>
+    <% movies.forEach(function(movie) { %>
+    <tr>
+        <td><a href="/movie/<%= movie.id %>"><%= movie.id %></a></td>
+        <td><%= movie.title %></td>
+        <td><%= movie.description %></td>
+    </tr>
+    <% }) %>
 </table>
 </body>
 </html>

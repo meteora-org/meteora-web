@@ -85,7 +85,7 @@ router.post('/save', function (req, res, next) {
                 if (err) {
                     throw err;
                 }
-                res.redirect('/movie/1');
+                res.redirect('/movie/' + req.body.id);
             });
     } else {
         console.log('insert: ' + JSON.stringify(req.body))

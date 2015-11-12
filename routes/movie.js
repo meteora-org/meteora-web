@@ -95,7 +95,7 @@ router.post('/save', function (req, res, next) {
                 if (err) {
                     throw err;
                 }
-                res.redirect('/movie/' + response.header.location);
+                res.redirect('/movie/');
             });
     }
 });

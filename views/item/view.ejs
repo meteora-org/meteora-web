@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <title>商品: Us000000のページ</title>
+    <title>商品: <%= title %>のページ</title>
   <% include ../_header %>
 </head>
 <body>
@@ -18,7 +18,7 @@
     <ol class="breadcrumb" style="background-color: rgba(1, 1, 1, .05);">
       <li><a href="#">Home</a></li>
       <li><a href="#">Items</a></li>
-      <li class="active">It000000</li>
+      <li class="active"><%= title %></li>
     </ol>
 
     <!-- container -->
@@ -30,7 +30,7 @@
           <img src="/img/item/It000000.png" class="img-rounded" width="100" height="100" alt="商品It000000のサムネイル画像">
         </div>
         <div class="col-xs-6">
-          <p>It000000</p>
+          <p><%= title %></p>
           <p class="m-b-0">アップル</p>
           <p class="m-b-0">売上個数: 87</p>
           <p>23,567円</p>

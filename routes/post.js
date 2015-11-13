@@ -7,8 +7,9 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/:id(\\d+)', function (req, res, next) {
-    res.render('../views/item/view');
-    res.send('item id ');
+	console.log("post page response" + res);
+
+  res.render('../views/post/view');
 });
 
 module.exports = router;

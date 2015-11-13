@@ -66,7 +66,7 @@ gulp.task('clean:css',["stylesheets:page"],function () {
 });
 
 gulp.task('imagemin',function (){
-	return gulp.src('images/*.+(jpg|jpeg|png|gif|svg)')
+	return gulp.src('img/item/*.+(jpg|jpeg|png|gif|svg)')
 	.pipe(imagemin({
 		progressive: true,
 		svgoPlugins: [{removeViewBox: false}],
@@ -75,7 +75,7 @@ gulp.task('imagemin',function (){
 			speed: 1
 		})]	
 	}))
-	.pipe(gulp.dest('images/dist/'));
+	.pipe(gulp.dest('img/dist/img/item'));
 });
 
 gulp.task('watch', function(){

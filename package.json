@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "start80": "node ./bin/www80"
+    "start3000": "node ./bin/www3000"
   },
   "dependencies": {
     "async": "^1.5.0",

@@ -26,7 +26,7 @@ router.get('/:id', function (req, res, next) {
             throw err;
         }
         console.log(JSON.stringify(results[0].body.data[0]));
-        res.render('../views/users/view', {
+        res.render('../views/user/view', {
             user: results[0].body.data[0]
         });
     });

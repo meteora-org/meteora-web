@@ -80,10 +80,10 @@ gulp.task('imagemin',function (){
 
 gulp.task('watch', function(){
 	gulp.watch('javascripts/**/*.js',['jshint','concat']);
-	gulp.watch('stylesheets/*.css',['stylesheets:page','imagemin']);
+	gulp.watch('stylesheets/*.css',['stylesheets:page']);
 })
 
-gulp.task('default', ['imagemin']);
+// gulp.task('default', ['imagemin']);
 gulp.task('start', ['watch']);
 
 gulp.task('sprite', function () {
